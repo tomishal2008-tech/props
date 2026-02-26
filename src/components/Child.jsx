@@ -36,23 +36,22 @@
 // }
 // export default Child;
 
-function Child({ image, video }) {
+// 
+
+function Child({ videos }) {
   return (
     <div>
-      {image && (
-        <img
-          src={image}
-          alt="motivational"
-          width="250"
-          style={{ border: "3px solid red" }}
-        />
-      )}
-
-      {video && (
-        <video width="400" controls>
+      {videos.map((video, index) => (
+        <video
+          key={index}
+          width="400"
+          controls
+          style={{ display: "block", marginBottom: "20px" }}
+        >
           <source src={video} type="video/mp4" />
+          Your browser does not support the video tag.
         </video>
-      )}
+      ))}
     </div>
   );
 }

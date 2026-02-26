@@ -39,16 +39,36 @@
 
 // export default Parent;
 
+// import Child from "./Child";
+
+// function Parent() {
+//   const imagePath = "/images/motivational-quote.PNG";
+//   const videoPath = "/videos/mov_bbb.mp4";
+
+//   return (
+//     <div>
+//       <Child image={imagePath} />
+//       <Child video={videoPath} />
+//     </div>
+//   );
+// }
+
+// export default Parent;
+
 import Child from "./Child";
 
 function Parent() {
-  const imagePath = "/images/motivational-quote.PNG";
-  const videoPath = "/videos/mov_bbb.mp4";
+  const videos = [
+    "/videos/video1.mp4",
+    "/videos/video2.mp4",
+    "/videos/video3.mp4",
+    "/videos/video4.mp4",
+    "/videos/video5.mp4",
+  ];
 
   return (
     <div>
-      <Child image={imagePath} />
-      <Child video={videoPath} />
+      <Child videos={videos} />
     </div>
   );
 }
