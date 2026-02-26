@@ -45,7 +45,7 @@ function Child({ videos }) {
         <video
           key={index}
           width="400"
-          controls muted
+          controls muted autoPlay
           style={{ display: "block", marginBottom: "20px" }}
         >
           <source src={video} type="video/mp4" />
