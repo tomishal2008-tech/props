@@ -59,13 +59,12 @@ import Child from "./Child";
 
 function Parent() {
   const videos = [
-    "/videos/video1.mp4",
-    "/videos/video2.mp4",
-    "/videos/video3.mp4",
-    "/videos/video4.mp4",
-    "/videos/video5.mp4",
-  ];
-
+  { platform: "Vimeo", url: "https://vimeo.com/1168599612?share=copy&fl=sv&fe=ci" },
+  { platform: "Cloudinary", url: "https://res.cloudinary.com/dpvrhpdhz/video/upload/v1772129835/video5_zcijqj.mp4" },
+  { platform: "Vimeo", url: "https://vimeo.com/1168596817?share=copy&fl=sv&fe=ci" },
+  { platform: "Vimeo", url: "https://vimeo.com/1168597902?share=copy&fl=sv&fe=ci" },
+  { platform: "Cloudinary", url: "https://res.cloudinary.com/dpvrhpdhz/video/upload/v1772130427/video2_eyvj4t.mp4" }
+];
   return (
     <div>
       <Child videos={videos} />
