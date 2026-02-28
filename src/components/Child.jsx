@@ -47,14 +47,14 @@ function Child({ videos }) {
             <iframe
               src={video.url}
               width="640"
-              height="360"
+              height="560"
               allowFullScreen
               title={`video-${index}`}
             />
           )}
 
           {video.platform === "Cloudinary" && (
-            <video width="640" controls>
+            <video width="640" controls muted>
               <source src={video.url} type="video/mp4" />
             </video>
           )}
