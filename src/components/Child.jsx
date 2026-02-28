@@ -42,18 +42,26 @@ function Child({ videos }) {
   return (
     <div>
       {videos.map((video, index) => (
-        <video
-          key={index}
-          width="400"
-          controls muted autoPlay
-          style={{ display: "block", marginBottom: "20px" }}
-        >
-          <source src={video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <div key={index}>
+          {video.platform === "Vimeo" && (
+            <iframe
+              src={video.url}
+              width="640"
+              height="360"
+              allowFullScreen
+              title={`video-${index}`}
+            />
+          )}
+
+          {video.platform === "Cloudinary" && (
+            <video width="640" controls>
+              <source src={video.url} type="video/mp4" />
+            </video>
+          )}
+        </div>
       ))}
     </div>
   );
 }
 
-export default Child;
+export default Child;   
